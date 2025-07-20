@@ -1,4 +1,4 @@
-class AwsAppVisualizer {
+class OverwatchVisualizer {
   constructor() {
     this.data = null;
     this.filteredData = null;
@@ -202,10 +202,10 @@ class AwsAppVisualizer {
       this.populateAppList();
       this.populateResourceTypes();
       this.updateViewInfo();
-      this.showToast('Data loaded successfully', 'success');
+      this.showToast('Infrastructure scan complete', 'success');
     } catch (error) {
       console.error('Error loading data:', error);
-      this.showToast(`Failed to load data: ${error.message}`, 'error');
+      this.showToast(`Infrastructure scan failed: ${error.message}`, 'error');
     } finally {
       this.hideLoading();
     }
@@ -667,7 +667,7 @@ class AwsAppVisualizer {
     
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'aws-architecture-diagram.svg';
+    link.download = 'overwatch-infrastructure-diagram.svg';
     link.click();
     
     URL.revokeObjectURL(url);
@@ -707,5 +707,5 @@ class AwsAppVisualizer {
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
-  window.visualizer = new AwsAppVisualizer();
+  window.visualizer = new OverwatchVisualizer();
 });

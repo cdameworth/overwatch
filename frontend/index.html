@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AWS App Visualizer</title>
+  <title>Overwatch - Infrastructure Mapping & Monitoring</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
 </head>
@@ -13,13 +13,16 @@
     <div class="header-content">
       <div class="header-left">
         <h1 class="logo">
-          <i class="fab fa-aws"></i>
-          AWS App Visualizer
+          <div class="logo-main">
+            <i class="fas fa-eye"></i>
+            Overwatch
+          </div>
+          <span class="logo-subtitle">Infrastructure Mapping & Monitoring</span>
         </h1>
         <nav class="breadcrumb">
           <span class="breadcrumb-item active">Dashboard</span>
           <span class="breadcrumb-separator">/</span>
-          <span class="breadcrumb-item" id="current-view">Architecture View</span>
+          <span class="breadcrumb-item" id="current-view">Infrastructure Overview</span>
         </nav>
       </div>
       <div class="header-right">
@@ -30,7 +33,7 @@
           </button>
           <button class="btn btn-primary" id="github-connect-btn" style="display: none;">
             <i class="fab fa-github"></i>
-            Connect GitHub
+            Connect Repository
           </button>
           <div class="user-profile" id="user-profile" style="display: none;">
             <img class="user-avatar" id="user-avatar" src="" alt="User">
@@ -139,7 +142,7 @@
           <div class="loading-overlay" id="loading-overlay">
             <div class="loading-spinner">
               <i class="fas fa-spinner fa-spin"></i>
-              <p>Loading AWS resources...</p>
+              <p>Scanning infrastructure...</p>
             </div>
           </div>
         </div>

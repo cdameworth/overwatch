@@ -1,5 +1,5 @@
 {
-  "name": "aws-app-visualizer-prototype",
+  "name": "overwatch-infrastructure-monitor",
   "version": "1.0.0",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
