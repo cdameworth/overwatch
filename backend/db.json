@@ -1,0 +1,3353 @@
+{
+  "maps": [
+    {
+      "id": 1752944725741,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": []
+    },
+    {
+      "id": 1752944885988,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": []
+    },
+    {
+      "id": 1752944924318,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": []
+    },
+    {
+      "id": 1752944982949,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": []
+    },
+    {
+      "id": 1752945004730,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": []
+    },
+    {
+      "id": 1752945005232,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": []
+    },
+    {
+      "id": 1752945053885,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": []
+    },
+    {
+      "id": 1752945090133,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": []
+    },
+    {
+      "id": 1752945317092,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": []
+    },
+    {
+      "id": 1752945462469,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": []
+    },
+    {
+      "id": 1752945471262,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": []
+    },
+    {
+      "id": 1752945522387,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": []
+    },
+    {
+      "id": 1752945571373,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": []
+    },
+    {
+      "id": 1752945597326,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": []
+    },
+    {
+      "id": 1752945731339,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752945842684,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752945843772,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752945859749,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752946105542,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752946163450,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752946252933,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752946276751,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752946285257,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752946292108,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752946298236,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752946438439,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752946445251,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752946455859,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752946474700,
+      "resources": {
+        "resource": {
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752946623172,
+      "resources": {
+        "resource": {
+          "aws_acm_certificate": {
+            "my_cert": [
+              {
+                "domain_name": "example.com",
+                "validation_method": "DNS"
+              }
+            ]
+          },
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_eks_cluster": {
+            "my_eks": [
+              {
+                "name": "my-eks-cluster",
+                "role_arn": "arn:aws:iam::123456789012:role/eks-cluster-role",
+                "vpc_config": [
+                  {
+                    "subnet_ids": [
+                      "subnet-12345678",
+                      "subnet-87654321"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "aws_eks_node_group": {
+            "my_eks_nodes": [
+              {
+                "cluster_name": "${aws_eks_cluster.my_eks.name}",
+                "node_group_name": "my-eks-nodes",
+                "node_role_arn": "arn:aws:iam::123456789012:role/eks-node-role",
+                "scaling_config": [
+                  {
+                    "desired_size": 2,
+                    "max_size": 3,
+                    "min_size": 1
+                  }
+                ],
+                "subnet_ids": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          },
+          "aws_lb": {
+            "my_alb": [
+              {
+                "internal": false,
+                "load_balancer_type": "application",
+                "name": "my-alb",
+                "security_groups": [
+                  "sg-12345678"
+                ],
+                "subnets": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lb_listener": {
+            "my_alb_listener": [
+              {
+                "certificate_arn": "${aws_acm_certificate.my_cert.arn}",
+                "default_action": [
+                  {
+                    "target_group_arn": "arn:aws:elasticloadbalancing:region:account-id:targetgroup/my-targets/1234567890123456",
+                    "type": "forward"
+                  }
+                ],
+                "load_balancer_arn": "${aws_lb.my_alb.arn}",
+                "port": "443",
+                "protocol": "HTTPS",
+                "ssl_policy": "ELBSecurityPolicy-2016-08"
+              }
+            ]
+          },
+          "aws_route53_record": {
+            "my_dns": [
+              {
+                "alias": [
+                  {
+                    "evaluate_target_health": true,
+                    "name": "${aws_lb.my_alb.dns_name}",
+                    "zone_id": "${aws_lb.my_alb.zone_id}"
+                  }
+                ],
+                "name": "app.example.com",
+                "type": "A",
+                "zone_id": "${aws_route53_zone.my_zone.zone_id}"
+              }
+            ]
+          },
+          "aws_route53_zone": {
+            "my_zone": [
+              {
+                "name": "example.com."
+              }
+            ]
+          },
+          "aws_s3_bucket": {
+            "my_bucket": [
+              {
+                "acl": "private",
+                "bucket": "my-app-bucket"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_eks_node_group.my_eks_nodes",
+          "to": "aws_eks_cluster.my_eks"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_acm_certificate.my_cert"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_lb.my_alb"
+        }
+      ]
+    },
+    {
+      "id": 1752946639791,
+      "resources": {
+        "resource": {
+          "aws_acm_certificate": {
+            "my_cert": [
+              {
+                "domain_name": "example.com",
+                "validation_method": "DNS"
+              }
+            ]
+          },
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_eks_cluster": {
+            "my_eks": [
+              {
+                "name": "my-eks-cluster",
+                "role_arn": "arn:aws:iam::123456789012:role/eks-cluster-role",
+                "vpc_config": [
+                  {
+                    "subnet_ids": [
+                      "subnet-12345678",
+                      "subnet-87654321"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "aws_eks_node_group": {
+            "my_eks_nodes": [
+              {
+                "cluster_name": "${aws_eks_cluster.my_eks.name}",
+                "node_group_name": "my-eks-nodes",
+                "node_role_arn": "arn:aws:iam::123456789012:role/eks-node-role",
+                "scaling_config": [
+                  {
+                    "desired_size": 2,
+                    "max_size": 3,
+                    "min_size": 1
+                  }
+                ],
+                "subnet_ids": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          },
+          "aws_lb": {
+            "my_alb": [
+              {
+                "internal": false,
+                "load_balancer_type": "application",
+                "name": "my-alb",
+                "security_groups": [
+                  "sg-12345678"
+                ],
+                "subnets": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lb_listener": {
+            "my_alb_listener": [
+              {
+                "certificate_arn": "${aws_acm_certificate.my_cert.arn}",
+                "default_action": [
+                  {
+                    "target_group_arn": "arn:aws:elasticloadbalancing:region:account-id:targetgroup/my-targets/1234567890123456",
+                    "type": "forward"
+                  }
+                ],
+                "load_balancer_arn": "${aws_lb.my_alb.arn}",
+                "port": "443",
+                "protocol": "HTTPS",
+                "ssl_policy": "ELBSecurityPolicy-2016-08"
+              }
+            ]
+          },
+          "aws_route53_record": {
+            "my_dns": [
+              {
+                "alias": [
+                  {
+                    "evaluate_target_health": true,
+                    "name": "${aws_lb.my_alb.dns_name}",
+                    "zone_id": "${aws_lb.my_alb.zone_id}"
+                  }
+                ],
+                "name": "app.example.com",
+                "type": "A",
+                "zone_id": "${aws_route53_zone.my_zone.zone_id}"
+              }
+            ]
+          },
+          "aws_route53_zone": {
+            "my_zone": [
+              {
+                "name": "example.com."
+              }
+            ]
+          },
+          "aws_s3_bucket": {
+            "my_bucket": [
+              {
+                "acl": "private",
+                "bucket": "my-app-bucket"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_eks_node_group.my_eks_nodes",
+          "to": "aws_eks_cluster.my_eks"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_acm_certificate.my_cert"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_lb.my_alb"
+        }
+      ]
+    },
+    {
+      "id": 1752946694972,
+      "resources": {
+        "resource": {
+          "aws_acm_certificate": {
+            "my_cert": [
+              {
+                "domain_name": "example.com",
+                "validation_method": "DNS"
+              }
+            ]
+          },
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_eks_cluster": {
+            "my_eks": [
+              {
+                "name": "my-eks-cluster",
+                "role_arn": "arn:aws:iam::123456789012:role/eks-cluster-role",
+                "vpc_config": [
+                  {
+                    "subnet_ids": [
+                      "subnet-12345678",
+                      "subnet-87654321"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "aws_eks_node_group": {
+            "my_eks_nodes": [
+              {
+                "cluster_name": "${aws_eks_cluster.my_eks.name}",
+                "node_group_name": "my-eks-nodes",
+                "node_role_arn": "arn:aws:iam::123456789012:role/eks-node-role",
+                "scaling_config": [
+                  {
+                    "desired_size": 2,
+                    "max_size": 3,
+                    "min_size": 1
+                  }
+                ],
+                "subnet_ids": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ]
+          },
+          "aws_lb": {
+            "my_alb": [
+              {
+                "internal": false,
+                "load_balancer_type": "application",
+                "name": "my-alb",
+                "security_groups": [
+                  "sg-12345678"
+                ],
+                "subnets": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lb_listener": {
+            "my_alb_listener": [
+              {
+                "certificate_arn": "${aws_acm_certificate.my_cert.arn}",
+                "default_action": [
+                  {
+                    "target_group_arn": "arn:aws:elasticloadbalancing:region:account-id:targetgroup/my-targets/1234567890123456",
+                    "type": "forward"
+                  }
+                ],
+                "load_balancer_arn": "${aws_lb.my_alb.arn}",
+                "port": "443",
+                "protocol": "HTTPS",
+                "ssl_policy": "ELBSecurityPolicy-2016-08"
+              }
+            ]
+          },
+          "aws_route53_record": {
+            "my_dns": [
+              {
+                "alias": [
+                  {
+                    "evaluate_target_health": true,
+                    "name": "${aws_lb.my_alb.dns_name}",
+                    "zone_id": "${aws_lb.my_alb.zone_id}"
+                  }
+                ],
+                "name": "app.example.com",
+                "type": "A",
+                "zone_id": "${aws_route53_zone.my_zone.zone_id}"
+              }
+            ]
+          },
+          "aws_route53_zone": {
+            "my_zone": [
+              {
+                "name": "example.com."
+              }
+            ]
+          },
+          "aws_s3_bucket": {
+            "my_bucket": [
+              {
+                "acl": "private",
+                "bucket": "my-app-bucket"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_eks_node_group.my_eks_nodes",
+          "to": "aws_eks_cluster.my_eks"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_acm_certificate.my_cert"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_lb.my_alb"
+        }
+      ]
+    },
+    {
+      "id": 1752946780533,
+      "resources": {
+        "resource": {
+          "aws_acm_certificate": {
+            "my_cert": [
+              {
+                "domain_name": "example.com",
+                "validation_method": "DNS"
+              }
+            ]
+          },
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_eks_cluster": {
+            "my_eks": [
+              {
+                "name": "my-eks-cluster",
+                "role_arn": "arn:aws:iam::123456789012:role/eks-cluster-role",
+                "vpc_config": [
+                  {
+                    "subnet_ids": [
+                      "subnet-12345678",
+                      "subnet-87654321"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "aws_eks_node_group": {
+            "my_eks_nodes": [
+              {
+                "cluster_name": "${aws_eks_cluster.my_eks.name}",
+                "node_group_name": "my-eks-nodes",
+                "node_role_arn": "arn:aws:iam::123456789012:role/eks-node-role",
+                "scaling_config": [
+                  {
+                    "desired_size": 2,
+                    "max_size": 3,
+                    "min_size": 1
+                  }
+                ],
+                "subnet_ids": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ],
+            "secondary_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "secondary_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ],
+            "secondary_apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.secondary_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGatewaySecondary"
+              }
+            ]
+          },
+          "aws_lb": {
+            "my_alb": [
+              {
+                "internal": false,
+                "load_balancer_type": "application",
+                "name": "my-alb",
+                "security_groups": [
+                  "sg-12345678"
+                ],
+                "subnets": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lb_listener": {
+            "my_alb_listener": [
+              {
+                "certificate_arn": "${aws_acm_certificate.my_cert.arn}",
+                "default_action": [
+                  {
+                    "target_group_arn": "arn:aws:elasticloadbalancing:region:account-id:targetgroup/my-targets/1234567890123456",
+                    "type": "forward"
+                  }
+                ],
+                "load_balancer_arn": "${aws_lb.my_alb.arn}",
+                "port": "443",
+                "protocol": "HTTPS",
+                "ssl_policy": "ELBSecurityPolicy-2016-08"
+              }
+            ]
+          },
+          "aws_route53_record": {
+            "my_dns": [
+              {
+                "alias": [
+                  {
+                    "evaluate_target_health": true,
+                    "name": "${aws_lb.my_alb.dns_name}",
+                    "zone_id": "${aws_lb.my_alb.zone_id}"
+                  }
+                ],
+                "name": "app.example.com",
+                "type": "A",
+                "zone_id": "${aws_route53_zone.my_zone.zone_id}"
+              }
+            ]
+          },
+          "aws_route53_zone": {
+            "my_zone": [
+              {
+                "name": "example.com."
+              }
+            ]
+          },
+          "aws_s3_bucket": {
+            "my_bucket": [
+              {
+                "acl": "private",
+                "bucket": "my-app-bucket"
+              }
+            ]
+          },
+          "aws_api_gateway_integration": {
+            "secondary_integration": [
+              {
+                "http_method": "${aws_api_gateway_method.secondary_method.http_method}",
+                "integration_http_method": "POST",
+                "resource_id": "${aws_api_gateway_resource.secondary_resource.id}",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}",
+                "type": "AWS_PROXY",
+                "uri": "${aws_lambda_function.secondary_lambda.invoke_arn}"
+              }
+            ]
+          },
+          "aws_api_gateway_method": {
+            "secondary_method": [
+              {
+                "authorization": "NONE",
+                "http_method": "GET",
+                "resource_id": "${aws_api_gateway_resource.secondary_resource.id}",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}"
+              }
+            ]
+          },
+          "aws_api_gateway_resource": {
+            "secondary_resource": [
+              {
+                "parent_id": "${aws_api_gateway_rest_api.myApi.root_resource_id}",
+                "path_part": "secondary",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_eks_node_group.my_eks_nodes",
+          "to": "aws_eks_cluster.my_eks"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_lambda_permission.secondary_apigw",
+          "to": "aws_lambda_function.secondary_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.secondary_apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_acm_certificate.my_cert"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_lb.my_alb"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_method.secondary_method"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_resource.secondary_resource"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_lambda_function.secondary_lambda"
+        },
+        {
+          "from": "aws_api_gateway_method.secondary_method",
+          "to": "aws_api_gateway_resource.secondary_resource"
+        },
+        {
+          "from": "aws_api_gateway_method.secondary_method",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_resource.secondary_resource",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_resource.secondary_resource",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752946818930,
+      "resources": {
+        "resource": {
+          "aws_acm_certificate": {
+            "my_cert": [
+              {
+                "domain_name": "example.com",
+                "validation_method": "DNS"
+              }
+            ]
+          },
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_eks_cluster": {
+            "my_eks": [
+              {
+                "name": "my-eks-cluster",
+                "role_arn": "arn:aws:iam::123456789012:role/eks-cluster-role",
+                "vpc_config": [
+                  {
+                    "subnet_ids": [
+                      "subnet-12345678",
+                      "subnet-87654321"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "aws_eks_node_group": {
+            "my_eks_nodes": [
+              {
+                "cluster_name": "${aws_eks_cluster.my_eks.name}",
+                "node_group_name": "my-eks-nodes",
+                "node_role_arn": "arn:aws:iam::123456789012:role/eks-node-role",
+                "scaling_config": [
+                  {
+                    "desired_size": 2,
+                    "max_size": 3,
+                    "min_size": 1
+                  }
+                ],
+                "subnet_ids": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ],
+            "secondary_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "secondary_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ],
+            "secondary_apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.secondary_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGatewaySecondary"
+              }
+            ]
+          },
+          "aws_lb": {
+            "my_alb": [
+              {
+                "internal": false,
+                "load_balancer_type": "application",
+                "name": "my-alb",
+                "security_groups": [
+                  "sg-12345678"
+                ],
+                "subnets": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lb_listener": {
+            "my_alb_listener": [
+              {
+                "certificate_arn": "${aws_acm_certificate.my_cert.arn}",
+                "default_action": [
+                  {
+                    "target_group_arn": "arn:aws:elasticloadbalancing:region:account-id:targetgroup/my-targets/1234567890123456",
+                    "type": "forward"
+                  }
+                ],
+                "load_balancer_arn": "${aws_lb.my_alb.arn}",
+                "port": "443",
+                "protocol": "HTTPS",
+                "ssl_policy": "ELBSecurityPolicy-2016-08"
+              }
+            ]
+          },
+          "aws_route53_record": {
+            "my_dns": [
+              {
+                "alias": [
+                  {
+                    "evaluate_target_health": true,
+                    "name": "${aws_lb.my_alb.dns_name}",
+                    "zone_id": "${aws_lb.my_alb.zone_id}"
+                  }
+                ],
+                "name": "app.example.com",
+                "type": "A",
+                "zone_id": "${aws_route53_zone.my_zone.zone_id}"
+              }
+            ]
+          },
+          "aws_route53_zone": {
+            "my_zone": [
+              {
+                "name": "example.com."
+              }
+            ]
+          },
+          "aws_s3_bucket": {
+            "my_bucket": [
+              {
+                "acl": "private",
+                "bucket": "my-app-bucket"
+              }
+            ]
+          },
+          "aws_api_gateway_integration": {
+            "secondary_integration": [
+              {
+                "http_method": "${aws_api_gateway_method.secondary_method.http_method}",
+                "integration_http_method": "POST",
+                "resource_id": "${aws_api_gateway_resource.secondary_resource.id}",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}",
+                "type": "AWS_PROXY",
+                "uri": "${aws_lambda_function.secondary_lambda.invoke_arn}"
+              }
+            ]
+          },
+          "aws_api_gateway_method": {
+            "secondary_method": [
+              {
+                "authorization": "NONE",
+                "http_method": "GET",
+                "resource_id": "${aws_api_gateway_resource.secondary_resource.id}",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}"
+              }
+            ]
+          },
+          "aws_api_gateway_resource": {
+            "secondary_resource": [
+              {
+                "parent_id": "${aws_api_gateway_rest_api.myApi.root_resource_id}",
+                "path_part": "secondary",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_eks_node_group.my_eks_nodes",
+          "to": "aws_eks_cluster.my_eks"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_lambda_permission.secondary_apigw",
+          "to": "aws_lambda_function.secondary_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.secondary_apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_acm_certificate.my_cert"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_lb.my_alb"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_method.secondary_method"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_resource.secondary_resource"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_lambda_function.secondary_lambda"
+        },
+        {
+          "from": "aws_api_gateway_method.secondary_method",
+          "to": "aws_api_gateway_resource.secondary_resource"
+        },
+        {
+          "from": "aws_api_gateway_method.secondary_method",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_resource.secondary_resource",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_resource.secondary_resource",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752946825731,
+      "resources": {
+        "resource": {
+          "aws_acm_certificate": {
+            "my_cert": [
+              {
+                "domain_name": "example.com",
+                "validation_method": "DNS"
+              }
+            ]
+          },
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_eks_cluster": {
+            "my_eks": [
+              {
+                "name": "my-eks-cluster",
+                "role_arn": "arn:aws:iam::123456789012:role/eks-cluster-role",
+                "vpc_config": [
+                  {
+                    "subnet_ids": [
+                      "subnet-12345678",
+                      "subnet-87654321"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "aws_eks_node_group": {
+            "my_eks_nodes": [
+              {
+                "cluster_name": "${aws_eks_cluster.my_eks.name}",
+                "node_group_name": "my-eks-nodes",
+                "node_role_arn": "arn:aws:iam::123456789012:role/eks-node-role",
+                "scaling_config": [
+                  {
+                    "desired_size": 2,
+                    "max_size": 3,
+                    "min_size": 1
+                  }
+                ],
+                "subnet_ids": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ],
+            "secondary_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "secondary_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ],
+            "secondary_apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.secondary_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGatewaySecondary"
+              }
+            ]
+          },
+          "aws_lb": {
+            "my_alb": [
+              {
+                "internal": false,
+                "load_balancer_type": "application",
+                "name": "my-alb",
+                "security_groups": [
+                  "sg-12345678"
+                ],
+                "subnets": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lb_listener": {
+            "my_alb_listener": [
+              {
+                "certificate_arn": "${aws_acm_certificate.my_cert.arn}",
+                "default_action": [
+                  {
+                    "target_group_arn": "arn:aws:elasticloadbalancing:region:account-id:targetgroup/my-targets/1234567890123456",
+                    "type": "forward"
+                  }
+                ],
+                "load_balancer_arn": "${aws_lb.my_alb.arn}",
+                "port": "443",
+                "protocol": "HTTPS",
+                "ssl_policy": "ELBSecurityPolicy-2016-08"
+              }
+            ]
+          },
+          "aws_route53_record": {
+            "my_dns": [
+              {
+                "alias": [
+                  {
+                    "evaluate_target_health": true,
+                    "name": "${aws_lb.my_alb.dns_name}",
+                    "zone_id": "${aws_lb.my_alb.zone_id}"
+                  }
+                ],
+                "name": "app.example.com",
+                "type": "A",
+                "zone_id": "${aws_route53_zone.my_zone.zone_id}"
+              }
+            ]
+          },
+          "aws_route53_zone": {
+            "my_zone": [
+              {
+                "name": "example.com."
+              }
+            ]
+          },
+          "aws_s3_bucket": {
+            "my_bucket": [
+              {
+                "acl": "private",
+                "bucket": "my-app-bucket"
+              }
+            ]
+          },
+          "aws_api_gateway_integration": {
+            "secondary_integration": [
+              {
+                "http_method": "${aws_api_gateway_method.secondary_method.http_method}",
+                "integration_http_method": "POST",
+                "resource_id": "${aws_api_gateway_resource.secondary_resource.id}",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}",
+                "type": "AWS_PROXY",
+                "uri": "${aws_lambda_function.secondary_lambda.invoke_arn}"
+              }
+            ]
+          },
+          "aws_api_gateway_method": {
+            "secondary_method": [
+              {
+                "authorization": "NONE",
+                "http_method": "GET",
+                "resource_id": "${aws_api_gateway_resource.secondary_resource.id}",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}"
+              }
+            ]
+          },
+          "aws_api_gateway_resource": {
+            "secondary_resource": [
+              {
+                "parent_id": "${aws_api_gateway_rest_api.myApi.root_resource_id}",
+                "path_part": "secondary",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_eks_node_group.my_eks_nodes",
+          "to": "aws_eks_cluster.my_eks"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_lambda_permission.secondary_apigw",
+          "to": "aws_lambda_function.secondary_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.secondary_apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_acm_certificate.my_cert"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_lb.my_alb"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_method.secondary_method"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_resource.secondary_resource"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_lambda_function.secondary_lambda"
+        },
+        {
+          "from": "aws_api_gateway_method.secondary_method",
+          "to": "aws_api_gateway_resource.secondary_resource"
+        },
+        {
+          "from": "aws_api_gateway_method.secondary_method",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_resource.secondary_resource",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_resource.secondary_resource",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752946870717,
+      "resources": {
+        "resource": {
+          "aws_acm_certificate": {
+            "my_cert": [
+              {
+                "domain_name": "example.com",
+                "validation_method": "DNS"
+              }
+            ]
+          },
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_eks_cluster": {
+            "my_eks": [
+              {
+                "name": "my-eks-cluster",
+                "role_arn": "arn:aws:iam::123456789012:role/eks-cluster-role",
+                "vpc_config": [
+                  {
+                    "subnet_ids": [
+                      "subnet-12345678",
+                      "subnet-87654321"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "aws_eks_node_group": {
+            "my_eks_nodes": [
+              {
+                "cluster_name": "${aws_eks_cluster.my_eks.name}",
+                "node_group_name": "my-eks-nodes",
+                "node_role_arn": "arn:aws:iam::123456789012:role/eks-node-role",
+                "scaling_config": [
+                  {
+                    "desired_size": 2,
+                    "max_size": 3,
+                    "min_size": 1
+                  }
+                ],
+                "subnet_ids": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ],
+            "secondary_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "secondary_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ],
+            "secondary_apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.secondary_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGatewaySecondary"
+              }
+            ]
+          },
+          "aws_lb": {
+            "my_alb": [
+              {
+                "internal": false,
+                "load_balancer_type": "application",
+                "name": "my-alb",
+                "security_groups": [
+                  "sg-12345678"
+                ],
+                "subnets": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lb_listener": {
+            "my_alb_listener": [
+              {
+                "certificate_arn": "${aws_acm_certificate.my_cert.arn}",
+                "default_action": [
+                  {
+                    "target_group_arn": "arn:aws:elasticloadbalancing:region:account-id:targetgroup/my-targets/1234567890123456",
+                    "type": "forward"
+                  }
+                ],
+                "load_balancer_arn": "${aws_lb.my_alb.arn}",
+                "port": "443",
+                "protocol": "HTTPS",
+                "ssl_policy": "ELBSecurityPolicy-2016-08"
+              }
+            ]
+          },
+          "aws_route53_record": {
+            "my_dns": [
+              {
+                "alias": [
+                  {
+                    "evaluate_target_health": true,
+                    "name": "${aws_lb.my_alb.dns_name}",
+                    "zone_id": "${aws_lb.my_alb.zone_id}"
+                  }
+                ],
+                "name": "app.example.com",
+                "type": "A",
+                "zone_id": "${aws_route53_zone.my_zone.zone_id}"
+              }
+            ]
+          },
+          "aws_route53_zone": {
+            "my_zone": [
+              {
+                "name": "example.com."
+              }
+            ]
+          },
+          "aws_s3_bucket": {
+            "my_bucket": [
+              {
+                "acl": "private",
+                "bucket": "my-app-bucket"
+              }
+            ]
+          },
+          "aws_api_gateway_integration": {
+            "secondary_integration": [
+              {
+                "http_method": "${aws_api_gateway_method.secondary_method.http_method}",
+                "integration_http_method": "POST",
+                "resource_id": "${aws_api_gateway_resource.secondary_resource.id}",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}",
+                "type": "AWS_PROXY",
+                "uri": "${aws_lambda_function.secondary_lambda.invoke_arn}"
+              }
+            ]
+          },
+          "aws_api_gateway_method": {
+            "secondary_method": [
+              {
+                "authorization": "NONE",
+                "http_method": "GET",
+                "resource_id": "${aws_api_gateway_resource.secondary_resource.id}",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}"
+              }
+            ]
+          },
+          "aws_api_gateway_resource": {
+            "secondary_resource": [
+              {
+                "parent_id": "${aws_api_gateway_rest_api.myApi.root_resource_id}",
+                "path_part": "secondary",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_eks_node_group.my_eks_nodes",
+          "to": "aws_eks_cluster.my_eks"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_lambda_permission.secondary_apigw",
+          "to": "aws_lambda_function.secondary_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.secondary_apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_acm_certificate.my_cert"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_lb.my_alb"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_method.secondary_method"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_resource.secondary_resource"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_lambda_function.secondary_lambda"
+        },
+        {
+          "from": "aws_api_gateway_method.secondary_method",
+          "to": "aws_api_gateway_resource.secondary_resource"
+        },
+        {
+          "from": "aws_api_gateway_method.secondary_method",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_resource.secondary_resource",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_resource.secondary_resource",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752946910249,
+      "resources": {
+        "resource": {
+          "aws_acm_certificate": {
+            "my_cert": [
+              {
+                "domain_name": "example.com",
+                "validation_method": "DNS"
+              }
+            ]
+          },
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_eks_cluster": {
+            "my_eks": [
+              {
+                "name": "my-eks-cluster",
+                "role_arn": "arn:aws:iam::123456789012:role/eks-cluster-role",
+                "vpc_config": [
+                  {
+                    "subnet_ids": [
+                      "subnet-12345678",
+                      "subnet-87654321"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "aws_eks_node_group": {
+            "my_eks_nodes": [
+              {
+                "cluster_name": "${aws_eks_cluster.my_eks.name}",
+                "node_group_name": "my-eks-nodes",
+                "node_role_arn": "arn:aws:iam::123456789012:role/eks-node-role",
+                "scaling_config": [
+                  {
+                    "desired_size": 2,
+                    "max_size": 3,
+                    "min_size": 1
+                  }
+                ],
+                "subnet_ids": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ],
+            "secondary_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "secondary_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ],
+            "secondary_apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.secondary_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGatewaySecondary"
+              }
+            ]
+          },
+          "aws_lb": {
+            "my_alb": [
+              {
+                "internal": false,
+                "load_balancer_type": "application",
+                "name": "my-alb",
+                "security_groups": [
+                  "sg-12345678"
+                ],
+                "subnets": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lb_listener": {
+            "my_alb_listener": [
+              {
+                "certificate_arn": "${aws_acm_certificate.my_cert.arn}",
+                "default_action": [
+                  {
+                    "target_group_arn": "arn:aws:elasticloadbalancing:region:account-id:targetgroup/my-targets/1234567890123456",
+                    "type": "forward"
+                  }
+                ],
+                "load_balancer_arn": "${aws_lb.my_alb.arn}",
+                "port": "443",
+                "protocol": "HTTPS",
+                "ssl_policy": "ELBSecurityPolicy-2016-08"
+              }
+            ]
+          },
+          "aws_route53_record": {
+            "my_dns": [
+              {
+                "alias": [
+                  {
+                    "evaluate_target_health": true,
+                    "name": "${aws_lb.my_alb.dns_name}",
+                    "zone_id": "${aws_lb.my_alb.zone_id}"
+                  }
+                ],
+                "name": "app.example.com",
+                "type": "A",
+                "zone_id": "${aws_route53_zone.my_zone.zone_id}"
+              }
+            ]
+          },
+          "aws_route53_zone": {
+            "my_zone": [
+              {
+                "name": "example.com."
+              }
+            ]
+          },
+          "aws_s3_bucket": {
+            "my_bucket": [
+              {
+                "acl": "private",
+                "bucket": "my-app-bucket"
+              }
+            ]
+          },
+          "aws_api_gateway_integration": {
+            "secondary_integration": [
+              {
+                "http_method": "${aws_api_gateway_method.secondary_method.http_method}",
+                "integration_http_method": "POST",
+                "resource_id": "${aws_api_gateway_resource.secondary_resource.id}",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}",
+                "type": "AWS_PROXY",
+                "uri": "${aws_lambda_function.secondary_lambda.invoke_arn}"
+              }
+            ]
+          },
+          "aws_api_gateway_method": {
+            "secondary_method": [
+              {
+                "authorization": "NONE",
+                "http_method": "GET",
+                "resource_id": "${aws_api_gateway_resource.secondary_resource.id}",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}"
+              }
+            ]
+          },
+          "aws_api_gateway_resource": {
+            "secondary_resource": [
+              {
+                "parent_id": "${aws_api_gateway_rest_api.myApi.root_resource_id}",
+                "path_part": "secondary",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_eks_node_group.my_eks_nodes",
+          "to": "aws_eks_cluster.my_eks"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_lambda_permission.secondary_apigw",
+          "to": "aws_lambda_function.secondary_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.secondary_apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_acm_certificate.my_cert"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_lb.my_alb"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_method.secondary_method"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_resource.secondary_resource"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_lambda_function.secondary_lambda"
+        },
+        {
+          "from": "aws_api_gateway_method.secondary_method",
+          "to": "aws_api_gateway_resource.secondary_resource"
+        },
+        {
+          "from": "aws_api_gateway_method.secondary_method",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_resource.secondary_resource",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_resource.secondary_resource",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    },
+    {
+      "id": 1752946942678,
+      "resources": {
+        "resource": {
+          "aws_acm_certificate": {
+            "my_cert": [
+              {
+                "domain_name": "example.com",
+                "validation_method": "DNS"
+              }
+            ]
+          },
+          "aws_api_gateway_rest_api": {
+            "myApi": [
+              {
+                "description": "API for Lambda integration",
+                "name": "MyApi"
+              }
+            ]
+          },
+          "aws_eks_cluster": {
+            "my_eks": [
+              {
+                "name": "my-eks-cluster",
+                "role_arn": "arn:aws:iam::123456789012:role/eks-cluster-role",
+                "vpc_config": [
+                  {
+                    "subnet_ids": [
+                      "subnet-12345678",
+                      "subnet-87654321"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "aws_eks_node_group": {
+            "my_eks_nodes": [
+              {
+                "cluster_name": "${aws_eks_cluster.my_eks.name}",
+                "node_group_name": "my-eks-nodes",
+                "node_role_arn": "arn:aws:iam::123456789012:role/eks-node-role",
+                "scaling_config": [
+                  {
+                    "desired_size": 2,
+                    "max_size": 3,
+                    "min_size": 1
+                  }
+                ],
+                "subnet_ids": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lambda_function": {
+            "my_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "my_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ],
+            "secondary_lambda": [
+              {
+                "filename": "lambda_function_payload.zip",
+                "function_name": "secondary_lambda",
+                "handler": "index.handler",
+                "role": "arn:aws:iam::123456789012:role/lambda-role",
+                "runtime": "nodejs14.x"
+              }
+            ]
+          },
+          "aws_lambda_permission": {
+            "apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.my_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGateway"
+              }
+            ],
+            "secondary_apigw": [
+              {
+                "action": "lambda:InvokeFunction",
+                "function_name": "${aws_lambda_function.secondary_lambda.function_name}",
+                "principal": "apigateway.amazonaws.com",
+                "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+                "statement_id": "AllowExecutionFromAPIGatewaySecondary"
+              }
+            ]
+          },
+          "aws_lb": {
+            "my_alb": [
+              {
+                "internal": false,
+                "load_balancer_type": "application",
+                "name": "my-alb",
+                "security_groups": [
+                  "sg-12345678"
+                ],
+                "subnets": [
+                  "subnet-12345678",
+                  "subnet-87654321"
+                ]
+              }
+            ]
+          },
+          "aws_lb_listener": {
+            "my_alb_listener": [
+              {
+                "certificate_arn": "${aws_acm_certificate.my_cert.arn}",
+                "default_action": [
+                  {
+                    "target_group_arn": "arn:aws:elasticloadbalancing:region:account-id:targetgroup/my-targets/1234567890123456",
+                    "type": "forward"
+                  }
+                ],
+                "load_balancer_arn": "${aws_lb.my_alb.arn}",
+                "port": "443",
+                "protocol": "HTTPS",
+                "ssl_policy": "ELBSecurityPolicy-2016-08"
+              }
+            ]
+          },
+          "aws_route53_record": {
+            "my_dns": [
+              {
+                "alias": [
+                  {
+                    "evaluate_target_health": true,
+                    "name": "${aws_lb.my_alb.dns_name}",
+                    "zone_id": "${aws_lb.my_alb.zone_id}"
+                  }
+                ],
+                "name": "app.example.com",
+                "type": "A",
+                "zone_id": "${aws_route53_zone.my_zone.zone_id}"
+              }
+            ]
+          },
+          "aws_route53_zone": {
+            "my_zone": [
+              {
+                "name": "example.com."
+              }
+            ]
+          },
+          "aws_s3_bucket": {
+            "my_bucket": [
+              {
+                "acl": "private",
+                "bucket": "my-app-bucket"
+              }
+            ]
+          },
+          "aws_api_gateway_integration": {
+            "secondary_integration": [
+              {
+                "http_method": "${aws_api_gateway_method.secondary_method.http_method}",
+                "integration_http_method": "POST",
+                "resource_id": "${aws_api_gateway_resource.secondary_resource.id}",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}",
+                "type": "AWS_PROXY",
+                "uri": "${aws_lambda_function.secondary_lambda.invoke_arn}"
+              }
+            ]
+          },
+          "aws_api_gateway_method": {
+            "secondary_method": [
+              {
+                "authorization": "NONE",
+                "http_method": "GET",
+                "resource_id": "${aws_api_gateway_resource.secondary_resource.id}",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}"
+              }
+            ]
+          },
+          "aws_api_gateway_resource": {
+            "secondary_resource": [
+              {
+                "parent_id": "${aws_api_gateway_rest_api.myApi.root_resource_id}",
+                "path_part": "secondary",
+                "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}"
+              }
+            ]
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "from": "aws_eks_node_group.my_eks_nodes",
+          "to": "aws_eks_cluster.my_eks"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_lambda_function.my_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_lambda_permission.secondary_apigw",
+          "to": "aws_lambda_function.secondary_lambda"
+        },
+        {
+          "from": "aws_lambda_permission.secondary_apigw",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_acm_certificate.my_cert"
+        },
+        {
+          "from": "aws_lb_listener.my_alb_listener",
+          "to": "aws_lb.my_alb"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_method.secondary_method"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_resource.secondary_resource"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_integration.secondary_integration",
+          "to": "aws_lambda_function.secondary_lambda"
+        },
+        {
+          "from": "aws_api_gateway_method.secondary_method",
+          "to": "aws_api_gateway_resource.secondary_resource"
+        },
+        {
+          "from": "aws_api_gateway_method.secondary_method",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_resource.secondary_resource",
+          "to": "aws_api_gateway_rest_api.myApi"
+        },
+        {
+          "from": "aws_api_gateway_resource.secondary_resource",
+          "to": "aws_api_gateway_rest_api.myApi"
+        }
+      ]
+    }
+  ],
+  "apps": [
+    {
+      "id": "app1",
+      "name": "App 1",
+      "resources": {
+        "aws_acm_certificate": {
+          "my_cert": [
+            {
+              "domain_name": "example.com",
+              "validation_method": "DNS"
+            }
+          ]
+        },
+        "aws_api_gateway_rest_api": {
+          "myApi": [
+            {
+              "description": "API for Lambda integration",
+              "name": "MyApi"
+            }
+          ]
+        },
+        "aws_eks_cluster": {
+          "my_eks": [
+            {
+              "name": "my-eks-cluster",
+              "role_arn": "arn:aws:iam::123456789012:role/eks-cluster-role",
+              "vpc_config": [
+                {
+                  "subnet_ids": [
+                    "subnet-12345678",
+                    "subnet-87654321"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "aws_eks_node_group": {
+          "my_eks_nodes": [
+            {
+              "cluster_name": "${aws_eks_cluster.my_eks.name}",
+              "node_group_name": "my-eks-nodes",
+              "node_role_arn": "arn:aws:iam::123456789012:role/eks-node-role",
+              "scaling_config": [
+                {
+                  "desired_size": 2,
+                  "max_size": 3,
+                  "min_size": 1
+                }
+              ],
+              "subnet_ids": [
+                "subnet-12345678",
+                "subnet-87654321"
+              ]
+            }
+          ]
+        },
+        "aws_lambda_function": {
+          "my_lambda": [
+            {
+              "filename": "lambda_function_payload.zip",
+              "function_name": "my_lambda",
+              "handler": "index.handler",
+              "role": "arn:aws:iam::123456789012:role/lambda-role",
+              "runtime": "nodejs14.x"
+            }
+          ]
+        },
+        "aws_lambda_permission": {
+          "apigw": [
+            {
+              "action": "lambda:InvokeFunction",
+              "function_name": "${aws_lambda_function.my_lambda.function_name}",
+              "principal": "apigateway.amazonaws.com",
+              "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+              "statement_id": "AllowExecutionFromAPIGateway"
+            }
+          ]
+        },
+        "aws_lb": {
+          "my_alb": [
+            {
+              "internal": false,
+              "load_balancer_type": "application",
+              "name": "my-alb",
+              "security_groups": [
+                "sg-12345678"
+              ],
+              "subnets": [
+                "subnet-12345678",
+                "subnet-87654321"
+              ]
+            }
+          ]
+        },
+        "aws_lb_listener": {
+          "my_alb_listener": [
+            {
+              "certificate_arn": "${aws_acm_certificate.my_cert.arn}",
+              "default_action": [
+                {
+                  "target_group_arn": "arn:aws:elasticloadbalancing:region:account-id:targetgroup/my-targets/1234567890123456",
+                  "type": "forward"
+                }
+              ],
+              "load_balancer_arn": "${aws_lb.my_alb.arn}",
+              "port": "443",
+              "protocol": "HTTPS",
+              "ssl_policy": "ELBSecurityPolicy-2016-08"
+            }
+          ]
+        },
+        "aws_route53_record": {
+          "my_dns": [
+            {
+              "alias": [
+                {
+                  "evaluate_target_health": true,
+                  "name": "${aws_lb.my_alb.dns_name}",
+                  "zone_id": "${aws_lb.my_alb.zone_id}"
+                }
+              ],
+              "name": "app.example.com",
+              "type": "A",
+              "zone_id": "${aws_route53_zone.my_zone.zone_id}"
+            }
+          ]
+        },
+        "aws_route53_zone": {
+          "my_zone": [
+            {
+              "name": "example.com."
+            }
+          ]
+        },
+        "aws_s3_bucket": {
+          "my_bucket": [
+            {
+              "acl": "private",
+              "bucket": "my-app-bucket"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "app2",
+      "name": "App 2",
+      "resources": {
+        "aws_api_gateway_integration": {
+          "secondary_integration": [
+            {
+              "http_method": "${aws_api_gateway_method.secondary_method.http_method}",
+              "integration_http_method": "POST",
+              "resource_id": "${aws_api_gateway_resource.secondary_resource.id}",
+              "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}",
+              "type": "AWS_PROXY",
+              "uri": "${aws_lambda_function.secondary_lambda.invoke_arn}"
+            }
+          ]
+        },
+        "aws_api_gateway_method": {
+          "secondary_method": [
+            {
+              "authorization": "NONE",
+              "http_method": "GET",
+              "resource_id": "${aws_api_gateway_resource.secondary_resource.id}",
+              "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}"
+            }
+          ]
+        },
+        "aws_api_gateway_resource": {
+          "secondary_resource": [
+            {
+              "parent_id": "${aws_api_gateway_rest_api.myApi.root_resource_id}",
+              "path_part": "secondary",
+              "rest_api_id": "${aws_api_gateway_rest_api.myApi.id}"
+            }
+          ]
+        },
+        "aws_lambda_function": {
+          "secondary_lambda": [
+            {
+              "filename": "lambda_function_payload.zip",
+              "function_name": "secondary_lambda",
+              "handler": "index.handler",
+              "role": "arn:aws:iam::123456789012:role/lambda-role",
+              "runtime": "nodejs14.x"
+            }
+          ]
+        },
+        "aws_lambda_permission": {
+          "secondary_apigw": [
+            {
+              "action": "lambda:InvokeFunction",
+              "function_name": "${aws_lambda_function.secondary_lambda.function_name}",
+              "principal": "apigateway.amazonaws.com",
+              "source_arn": "${aws_api_gateway_rest_api.myApi.execution_arn}",
+              "statement_id": "AllowExecutionFromAPIGatewaySecondary"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "users": [],
+  "repositories": []
+}

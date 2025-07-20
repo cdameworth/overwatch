@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS App Visualizer</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="header-left">
+        <h1 class="logo">
+          <i class="fab fa-aws"></i>
+          AWS App Visualizer
+        </h1>
+        <nav class="breadcrumb">
+          <span class="breadcrumb-item active">Dashboard</span>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-item" id="current-view">Architecture View</span>
+        </nav>
+      </div>
+      <div class="header-right">
+        <div class="header-controls">
+          <button class="btn btn-secondary" id="refresh-btn">
+            <i class="fas fa-sync-alt"></i>
+            Refresh
+          </button>
+          <button class="btn btn-primary" id="github-connect-btn" style="display: none;">
+            <i class="fab fa-github"></i>
+            Connect GitHub
+          </button>
+          <div class="user-profile" id="user-profile" style="display: none;">
+            <img class="user-avatar" id="user-avatar" src="" alt="User">
+            <span class="user-name" id="user-name"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="main-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">
+          <i class="fas fa-layer-group"></i>
+          Applications
+        </h3>
+        <div class="app-list" id="app-list">
+          <div class="app-item loading">
+            <i class="fas fa-spinner fa-spin"></i>
+            Loading applications...
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">
+          <i class="fas fa-cogs"></i>
+          View Controls
+        </h3>
+        <div class="control-group">
+          <label class="control-label">
+            <input type="checkbox" id="show-labels" checked>
+            <span class="checkmark"></span>
+            Show Labels
+          </label>
+          <label class="control-label">
+            <input type="checkbox" id="show-dependencies" checked>
+            <span class="checkmark"></span>
+            Show Dependencies
+          </label>
+          <label class="control-label">
+            <input type="checkbox" id="group-by-app" checked>
+            <span class="checkmark"></span>
+            Group by Application
+          </label>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">
+          <i class="fas fa-search"></i>
+          Resource Filter
+        </h3>
+        <div class="filter-group">
+          <input type="text" class="filter-input" id="resource-filter" placeholder="Filter resources...">
+          <div class="resource-types" id="resource-types">
+            <!-- Resource type filters will be populated here -->
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Graph Controls -->
+      <div class="graph-controls">
+        <div class="controls-left">
+          <button class="btn btn-icon" id="zoom-in-btn" title="Zoom In">
+            <i class="fas fa-search-plus"></i>
+          </button>
+          <button class="btn btn-icon" id="zoom-out-btn" title="Zoom Out">
+            <i class="fas fa-search-minus"></i>
+          </button>
+          <button class="btn btn-icon" id="reset-zoom-btn" title="Reset Zoom">
+            <i class="fas fa-home"></i>
+          </button>
+          <button class="btn btn-icon" id="fullscreen-btn" title="Fullscreen">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+        <div class="controls-center">
+          <div class="view-info">
+            <span id="resource-count">0 resources</span>
+            <span class="separator">•</span>
+            <span id="app-count">0 applications</span>
+          </div>
+        </div>
+        <div class="controls-right">
+          <button class="btn btn-secondary" id="export-btn">
+            <i class="fas fa-download"></i>
+            Export
+          </button>
+          <button class="btn btn-secondary" id="settings-btn">
+            <i class="fas fa-cog"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Graph Container -->
+      <div class="graph-container" id="graph-container">
+        <div class="graph-wrapper">
+          <div id="graph" class="graph"></div>
+          <div class="loading-overlay" id="loading-overlay">
+            <div class="loading-spinner">
+              <i class="fas fa-spinner fa-spin"></i>
+              <p>Loading AWS resources...</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Minimap -->
+        <div class="minimap" id="minimap">
+          <div class="minimap-viewport" id="minimap-viewport"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Resource Detail Panel -->
+  <div class="detail-panel" id="detail-panel">
+    <div class="detail-header">
+      <h3 class="detail-title" id="detail-title">Resource Details</h3>
+      <button class="btn btn-icon detail-close" id="detail-close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="detail-content" id="detail-content">
+      <!-- Resource details will be populated here -->
+    </div>
+  </div>
+
+  <!-- Toast Notifications -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    volumes:
+      - ./backend:/app/backend
+      - ./package.json:/app/package.json
+      - ./package-lock.json:/app/package-lock.json
+    command: sh -c "npm install && npm run server"
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=development
+      - SESSION_SECRET=development_session_secret
+      - JWT_SECRET=development_jwt_secret
+      # GitHub credentials are optional - uncomment and set if needed
+      # - GITHUB_CLIENT_ID=${GITHUB_CLIENT_ID}
+      # - GITHUB_CLIENT_SECRET=${GITHUB_CLIENT_SECRET}
+      # - GITHUB_ACCESS_TOKEN=${GITHUB_ACCESS_TOKEN}
+    depends_on:
+      - frontend
+    networks:
+      - appnet
+
+  frontend:
+    image: node:18
+    working_dir: /app
+    volumes:
+      - ./frontend:/app/frontend
+      - ./package.json:/app/package.json
+      - ./package-lock.json:/app/package-lock.json
+    command: sh -c "npm install -g live-server && live-server frontend --port=3000 --open=./index.html --host=0.0.0.0"
+    # Serve frontend on host port 5000 (container port 3000)
+    ports:
+      - "5000:3000"
+    networks:
+      - appnet
+
+networks:
+  appnet:
+    driver: bridge 
