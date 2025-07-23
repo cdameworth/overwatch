@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connection Test</title>
+</head>
+<body>
+    <h1>Overwatch Connection Test</h1>
+    <div id="test-results"></div>
+    
+    <script>
+        async function testConnections() {
+            const results = document.getElementById('test-results');
+            
+            // Test backend API
+            try {
+                const response = await fetch('http://localhost:4001/api/parse');
+                const data = await response.json();
+                results.innerHTML += '<p>✅ Backend API (port 4001): SUCCESS</p>';
+                results.innerHTML += `<p>📊 Resources: ${Object.keys(data.resources?.resource || {}).length}</p>`;
+                results.innerHTML += `<p>🔗 Dependencies: ${data.dependencies?.length || 0}</p>`;
+                results.innerHTML += `<p>📱 Apps: ${data.apps?.length || 0}</p>`;
+            } catch (error) {
+                results.innerHTML += `<p>❌ Backend API Error: ${error.message}</p>`;
+            }
+            
+            // Test enterprise mode
+            try {
+                const response = await fetch('http://localhost:4001/api/parse?useEnterprise=true');
+                const data = await response.json();
+                results.innerHTML += '<p>✅ Enterprise API: SUCCESS</p>';
+                results.innerHTML += `<p>🏢 Enterprise Mode: ${data.isEnterprise || false}</p>`;
+            } catch (error) {
+                results.innerHTML += `<p>❌ Enterprise API Error: ${error.message}</p>`;
+            }
+        }
+        
+        testConnections();
+    </script>
+</body>
+</html>

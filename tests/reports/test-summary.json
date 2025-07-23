@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-07-23T12:30:09.243Z",
+  "testRun": {
+    "completed": true,
+    "duration": 0
+  },
+  "environment": {
+    "node": "v22.15.0",
+    "platform": "darwin",
+    "cwd": "/Users/cdameworth/Documents/projects/aws-app-visualizer-prototype"
+  }
+}

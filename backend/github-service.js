@@ -43,6 +43,25 @@ class GitHubService {
     }
   }
 
+  /**
+   * Get directory contents from GitHub
+   */
+  async getDirectoryContents(owner, repo, dirPath = '', branch = 'main') {
+    try {
+      const { data } = await this.octokit.rest.repos.getContent({
+        owner,
+        repo,
+        path: dirPath,
+        ref: branch,
+      });
+      
+      return Array.isArray(data) ? data : [data];
+    } catch (error) {
+      console.error(`Error fetching directory contents for ${dirPath}:`, error);
+      throw new Error(`Failed to fetch directory contents: ${dirPath}`);
+    }
+  }
+
   async _searchTerraformFiles(owner, repo, branch, path, files) {
     try {
       const { data } = await this.octokit.rest.repos.getContent({

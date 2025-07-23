@@ -1,0 +1,17 @@
+{
+  "startTime": "2025-07-22T21:13:37.637Z",
+  "environment": {
+    "node": "v22.15.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "ci": false
+  },
+  "config": {
+    "parallel": true,
+    "headed": true,
+    "debug": true,
+    "screenshot": true,
+    "coverage": true,
+    "timeout": 60000
+  }
+}

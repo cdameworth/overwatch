@@ -2,3 +2,7 @@ node_modules
 .env.example
 CLAUDE.md
 package-lock.json
+artifacts/
+test-results/
+TEST-STRATEGY.md
+.DS_Store

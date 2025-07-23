@@ -1,0 +1,113 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="7.345762000000001">
+<testsuite name="zoom-drag-interaction.spec.js" timestamp="2025-07-23T12:30:02.996Z" hostname="chromium" tests="1" failures="0" skipped="0" time="5.93" errors="0">
+<testcase name="Zoom and Drag Impact on Interactions › should maintain hover and click functionality after zoom and drag operations" classname="zoom-drag-interaction.spec.js" time="5.93">
+<system-out>
+<![CDATA[🧪 Starting comprehensive zoom/drag interaction test...
+📊 Found 20 nodes for testing
+
+=== PHASE 1: Initial Functionality ===
+🔍 Test 1: Testing initial hover...
+Initial hover result: {
+  nodeExists: [33mtrue[39m,
+  hoverCardExists: [33mtrue[39m,
+  hoverCardVisible: [33mtrue[39m,
+  debugInfo: {
+    svgExists: [33mtrue[39m,
+    nodeGroups: [33m20[39m,
+    nodeData: {
+      id: [32m'aws_sagemaker_endpoint.insight-engine_insight_endpoint'[39m,
+      type: [32m'aws_sagemaker_endpoint'[39m,
+      name: [32m'insight-engine_insight_endpoint'[39m,
+      config: [36m[Object][39m,
+      group: [32m'insight-engine'[39m,
+      appName: [32m'insight-engine'[39m,
+      repository: [90mundefined[39m,
+      category: [32m'resource'[39m,
+      index: [33m0[39m,
+      x: [33m1378.1711378668645[39m,
+      y: [33m794.2442041146672[39m,
+      vy: [33m0.013819295359552453[39m,
+      vx: [33m-0.5409050454239533[39m
+    },
+    nodeRect: {
+      x: [33m938.9140014648438[39m,
+      y: [33m432.56939697265625[39m,
+      width: [33m96.62579345703125[39m,
+      height: [33m19.666656494140625[39m
+    },
+    mousePos: { x: [33m987.2268981933594[39m, y: [33m442.40272521972656[39m },
+    appExists: [33mtrue[39m,
+    filteredDataNodes: [33m20[39m,
+    graphGroupExists: [33mtrue[39m
+  },
+  hoverCardOpacity: [32m'1'[39m,
+  hoverCardDisplay: [32m'block'[39m,
+  hoverCardContent: [32m'\n'[39m +
+    [32m'      <div style="display: flex; align-items: center; margin-bottom: 8px;">\n'[39m +
+    [32m'        <img src="icons'[39m
+}
+🖱️ Test 2: Testing initial click...
+Initial click result: { nodeExists: [33mtrue[39m, detailPanelExists: [33mtrue[39m, detailPanelVisible: [33mtrue[39m }
+
+=== PHASE 2: Zoom Operations ===
+🔍 Performing zoom in operation...
+
+=== PHASE 3: Drag Operations ===
+🖱️ Performing drag operation...
+Drag operation result: { dragCompleted: [33mtrue[39m }
+
+=== PHASE 4: Post-Zoom/Drag Validation ===
+🔍 Test 3: Testing hover after zoom/drag...
+Post-drag hover 1 result: {
+  nodeExists: [33mtrue[39m,
+  nodePosition: { x: [33m1259.6661376953125[39m, y: [33m384.0104675292969[39m },
+  nodeData: {
+    id: [32m'aws_api_gateway_rest_api.insight-engine_data_ingestion_api'[39m,
+    x: [33m1202.965494383955[39m,
+    y: [33m666.1150163992194[39m
+  },
+  graphCoords: { x: [33m1202.9654541015625[39m, y: [33m666.114990234375[39m },
+  currentTransform: { k: [33m2[39m, x: [33m-237.2881317138672[39m, y: [33m-686.440673828125[39m },
+  transformedNodePos: { x: [33m2168.642857054043[39m, y: [33m645.7893589703137[39m },
+  distance: [33m0.00004803405281954725[39m,
+  hoverCardExists: [33mtrue[39m,
+  hoverCardVisible: [33mtrue[39m,
+  hoverCardPosition: { left: [32m'924px'[39m, top: [32m'374px'[39m }
+}
+🖱️ Test 4: Testing click after zoom/drag...
+Post-drag click 1 result: {
+  nodeExists: [33mtrue[39m,
+  nodePosition: { x: [33m1621.1041259765625[39m, y: [33m327.01544189453125[39m },
+  clickDispatched: [33mtrue[39m
+}
+
+=== PHASE 5: Additional Validation ===
+🔍 Test 5: Second hover validation...
+Post-drag hover 2 result: { nodeExists: [33mtrue[39m, hoverCardExists: [33mtrue[39m, hoverCardVisible: [33mtrue[39m }
+🖱️ Test 6: Second click validation...
+Post-drag click 2 result: { nodeExists: [33mtrue[39m, clickDispatched: [33mtrue[39m }
+🔍 Test 7: Third hover validation...
+Post-drag hover 3 result: { nodeExists: [33mtrue[39m, hoverCardExists: [33mtrue[39m, hoverCardVisible: [33mtrue[39m }
+
+=== PHASE 6: Final Analysis ===
+
+📊 HOVER TEST SUMMARY:
+  Initial: ✅ PASS
+  Post-drag 1: ✅ PASS
+  Post-drag 2: ✅ PASS
+  Post-drag 3: ✅ PASS
+
+📈 Hover Success Rate: 100%
+
+🔍 Final Application State: {
+  nodeGroupsExist: [33mtrue[39m,
+  svgExists: [33mtrue[39m,
+  currentTransform: { k: [33m2[39m, x: [33m-237.2881317138672[39m, y: [33m-686.440673828125[39m },
+  isDragging: [33mfalse[39m,
+  currentHoveredNode: [32m'aws_sagemaker_endpoint.insight-engine_insight_endpoint'[39m
+}
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

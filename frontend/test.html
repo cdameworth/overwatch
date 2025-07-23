@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .success { color: green; }
+        .error { color: red; }
+        .info { color: blue; }
+    </style>
+</head>
+<body>
+    <h1>Overwatch API Connection Test</h1>
+    <div id="results"></div>
+    <button onclick="testAPI()">Test API</button>
+    <button onclick="testEnterprise()">Test Enterprise</button>
+    
+    <script>
+        const results = document.getElementById('results');
+        
+        function log(message, type = 'info') {
+            results.innerHTML += `<div class="${type}">${new Date().toLocaleTimeString()}: ${message}</div>`;
+        }
+        
+        async function testAPI() {
+            results.innerHTML = '';
+            log('Testing basic API...', 'info');
+            
+            try {
+                const response = await fetch('http://localhost:4001/api/parse');
+                log(`Response status: ${response.status}`, response.ok ? 'success' : 'error');
+                
+                const data = await response.json();
+                log(`Resources: ${Object.keys(data.resources?.resource || {}).length}`, 'success');
+                log(`Dependencies: ${data.dependencies?.length || 0}`, 'success');
+                log(`Apps: ${data.apps?.length || 0}`, 'success');
+                log('✅ Basic API test successful!', 'success');
+                
+            } catch (error) {
+                log(`❌ API Error: ${error.message}`, 'error');
+                log(`Stack: ${error.stack}`, 'error');
+            }
+        }
+        
+        async function testEnterprise() {
+            log('---', 'info');
+            log('Testing enterprise API...', 'info');
+            
+            try {
+                const response = await fetch('http://localhost:4001/api/parse?useEnterprise=true&environment=prod');
+                log(`Response status: ${response.status}`, response.ok ? 'success' : 'error');
+                
+                const data = await response.json();
+                log(`Enterprise mode: ${data.isEnterprise || false}`, 'success');
+                log(`Has summary: ${!!data.summary}`, 'success');
+                log('✅ Enterprise API test successful!', 'success');
+                
+            } catch (error) {
+                log(`❌ Enterprise API Error: ${error.message}`, 'error');
+            }
+        }
+        
+        // Auto-test on load
+        testAPI();
+    </script>
+</body>
+</html>
