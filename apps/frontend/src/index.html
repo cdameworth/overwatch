@@ -27,6 +27,9 @@
       </div>
       <div class="header-right">
         <div class="header-controls">
+          <button class="btn btn-icon" id="theme-toggle-btn" title="Toggle Theme">
+            <i class="fas fa-moon" id="theme-toggle-icon"></i>
+          </button>
           <button class="btn btn-secondary" id="refresh-btn">
             <i class="fas fa-sync-alt"></i>
             Refresh
@@ -57,6 +60,104 @@
           <div class="app-item loading">
             <i class="fas fa-spinner fa-spin"></i>
             Loading applications...
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">
+          <i class="fab fa-github"></i>
+          Data Source
+        </h3>
+        <div class="control-group">
+          <div class="control-row">
+            <label class="control-label-small">Source:</label>
+            <select id="data-source-selector" class="control-select">
+              <option value="local">Local Files</option>
+              <option value="github">GitHub Repository</option>
+            </select>
+          </div>
+          
+          <div id="github-config" style="display: none;">
+            <div class="control-row">
+              <label class="control-label-small">Connection:</label>
+              <select id="github-connection" class="control-select">
+                <option value="">Loading connections...</option>
+              </select>
+            </div>
+            
+            <div class="control-row" id="github-repo-row" style="display: none;">
+              <label class="control-label-small">Repository:</label>
+              <select id="github-repo-select" class="control-select">
+                <option value="">Select a repository...</option>
+              </select>
+            </div>
+            
+            <div class="control-row" id="github-branch-row" style="display: none;">
+              <label class="control-label-small">Branch:</label>
+              <input type="text" id="github-branch" class="filter-input" placeholder="main" value="main">
+            </div>
+            
+            <button id="load-github-repo" class="btn btn-primary" style="margin-top: 8px; width: 100%; display: none;">
+              <i class="fas fa-download"></i>
+              Load Repository
+            </button>
+            
+            <!-- Legacy manual input (collapsible) -->
+            <div style="margin-top: 12px; border-top: 1px solid #333; padding-top: 8px;">
+              <button id="toggle-manual-github" class="btn btn-secondary" style="width: 100%; font-size: 12px;">
+                <i class="fas fa-edit"></i>
+                Manual Entry
+              </button>
+              
+              <div id="manual-github-config" style="display: none; margin-top: 8px;">
+                <div class="control-row">
+                  <label class="control-label-small">Owner:</label>
+                  <input type="text" id="github-owner" class="filter-input" placeholder="e.g. hashicorp">
+                </div>
+                <div class="control-row">
+                  <label class="control-label-small">Repository:</label>
+                  <input type="text" id="github-repo" class="filter-input" placeholder="e.g. terraform-aws-modules">
+                </div>
+                <div class="control-row">
+                  <label class="control-label-small">Branch:</label>
+                  <input type="text" id="github-branch-manual" class="filter-input" placeholder="main" value="main">
+                </div>
+                <button id="load-github-repo-manual" class="btn btn-primary" style="margin-top: 8px; width: 100%;">
+                  <i class="fas fa-download"></i>
+                  Load Repository (Manual)
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">
+          <i class="fas fa-history"></i>
+          Configuration History
+        </h3>
+        <div class="control-group">
+          <div class="control-row">
+            <label class="control-label-small">Current Version:</label>
+            <span class="version-indicator" id="current-version">v1</span>
+          </div>
+          <div class="history-timeline" id="history-timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot current"></div>
+              <div class="timeline-content">
+                <div class="timeline-version">v1</div>
+                <div class="timeline-message">Initial configuration</div>
+                <div class="timeline-date">Just now</div>
+              </div>
+            </div>
+          </div>
+          <div class="history-controls">
+            <button class="btn btn-secondary btn-sm" id="view-all-history" style="width: 100%; margin-top: 8px;" disabled>
+              <i class="fas fa-clock"></i>
+              View Full History
+            </button>
           </div>
         </div>
       </div>
@@ -186,6 +287,21 @@
     </div>
     <div class="detail-content" id="detail-content">
       <!-- Resource details will be populated here -->
+    </div>
+  </div>
+
+  <!-- Configuration History Modal -->
+  <div class="history-modal" id="history-modal">
+    <div class="history-modal-content">
+      <div class="history-modal-header">
+        <h3 class="history-modal-title">Configuration History</h3>
+        <button class="btn btn-icon" id="history-modal-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="history-modal-body" id="history-modal-body">
+        <!-- Configuration history will be populated here -->
+      </div>
     </div>
   </div>
 

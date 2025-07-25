@@ -5,6 +5,8 @@ const { inferDependencies, inferCrossApplicationDependencies } = require('./depe
 const GitHubService = require('./github-service');
 const AuthService = require('./auth-service');
 const EnterpriseRepositoryService = require('./enterprise-repository-service');
+const DatabaseClient = require('./database-client');
+const TelemetryService = require('./telemetry-service');
 const low = require('lowdb');
 const path = require('path');
 const cors = require('cors');
@@ -12,25 +14,35 @@ const passport = require('passport');
 const session = require('express-session');
 require('dotenv').config();
 
-// Debug: log before requiring FileSync
-console.log('About to require lowdb/adapters/FileSync');
-let FileSync;
-try {
-  FileSync = require('lowdb/adapters/FileSync');
-  console.log('FileSync after require:', FileSync);
-} catch (e) {
-  console.error('Error requiring lowdb/adapters/FileSync:', e);
+// Initialize MongoDB database client and telemetry service (primary mode)
+const dbClient = new DatabaseClient();
+// Use API key for external API access (which is working)
+dbClient.setApiKey('internal-automation-789');
+const telemetryService = new TelemetryService(dbClient);
+console.log('Initializing MongoDB database client (primary mode)');
+
+// MongoDB connection validation at startup
+async function validateMongoDBConnection() {
+  try {
+    console.log('Validating MongoDB connection...');
+    const healthCheck = await dbClient.healthCheck();
+    console.log('✓ MongoDB connection validated successfully:', healthCheck.status);
+    return true;
+  } catch (error) {
+    console.warn('⚠ MongoDB connection validation failed:', error.message);
+    console.log('📋 Application will fall back to legacy JSON mode when needed');
+    return false;
+  }
 }
 
-// Debug logging
-const dbPath = path.join(__dirname, 'db.json');
-console.log('dbPath:', dbPath);
-const adapter = new FileSync(dbPath);
-const db = low(adapter);
-db.defaults({ maps: [], users: [], repositories: [], apps: [], analyses: [] }).write();
+// Legacy JSON database (for backwards compatibility fallback only)
+let db, authService;
 
-// Initialize auth service
-const authService = new AuthService(db);
+// Initialize minimal auth service for MongoDB-first mode
+authService = {
+  authEnabled: false,
+  requireAuth: (req, res, next) => next()
+};
 
 const app = express();
 app.use(express.json());
@@ -198,15 +210,57 @@ app.post('/api/github/sync', authService.requireAuth.bind(authService), async (r
     // Parse Terraform files from GitHub
     const parsedApps = await parseMultipleTerraformFromGitHub(syncResult);
     
-    // Store apps in database
-    parsedApps.forEach(app => {
-      const existingApp = db.get('apps').find({ id: app.id }).value();
-      if (!existingApp) {
-        db.get('apps').push({ ...app, userId }).write();
-      } else {
-        db.get('apps').find({ id: app.id }).assign({ ...app, userId }).write();
+    // Store apps in MongoDB database with configuration history
+    const dbUpdates = [];
+    for (const app of parsedApps) {
+      try {
+        // Try to update existing application in MongoDB first
+        const applicationData = {
+          id: app.id,
+          name: app.name,
+          repositoryOwner: owner,
+          repositoryName: repo,
+          branch: branch,
+          lastSync: new Date(),
+          resources: app.resources || {},
+          dependencies: app.dependencies || [],
+          groups: app.groups || {},
+          changeLog: `GitHub sync from ${owner}/${repo}@${branch}`,
+          commitHash: syncResult.latestCommit?.sha
+        };
+
+        const result = await dbClient.updateApplication(app.id, applicationData);
+        dbUpdates.push({ success: true, applicationId: app.id, action: 'updated' });
+      } catch (error) {
+        // If update fails, try to create new application
+        try {
+          const applicationData = {
+            id: app.id,
+            name: app.name,
+            repositoryOwner: owner,
+            repositoryName: repo,
+            branch: branch,
+            lastSync: new Date(),
+            resources: app.resources || {},
+            dependencies: app.dependencies || [],
+            groups: app.groups || {}
+          };
+
+          const result = await dbClient.createApplication(applicationData);
+          dbUpdates.push({ success: true, applicationId: app.id, action: 'created' });
+        } catch (createError) {
+          console.warn(`Failed to store app ${app.id} in MongoDB, using legacy storage:`, createError.message);
+          // Fallback to legacy JSON storage
+          const existingApp = db.get('apps').find({ id: app.id }).value();
+          if (!existingApp) {
+            db.get('apps').push({ ...app, userId }).write();
+          } else {
+            db.get('apps').find({ id: app.id }).assign({ ...app, userId }).write();
+          }
+          dbUpdates.push({ success: true, applicationId: app.id, action: 'legacy_fallback' });
+        }
       }
-    });
+    }
     
     // Update repository sync status
     db.get('repositories').find({ id: repositoryId }).assign({ 
@@ -217,7 +271,8 @@ app.post('/api/github/sync', authService.requireAuth.bind(authService), async (r
     res.json({ 
       success: true, 
       apps: parsedApps,
-      repository: syncResult.repository 
+      repository: syncResult.repository,
+      databaseUpdates: dbUpdates
     });
   } catch (error) {
     console.error('Error syncing repository:', error);
@@ -373,25 +428,180 @@ app.get('/api/github/apps', authService.requireAuth.bind(authService), async (re
   }
 });
 
-// Enhanced parse endpoint that supports both legacy and enterprise analysis
+// Simple GitHub repository parsing endpoint (no auth required for public repos)
+app.post('/api/parse-github', async (req, res) => {
+  const { owner, repo, branch = 'main' } = req.body;
+  
+  if (!owner || !repo) {
+    return res.status(400).json({ error: 'Owner and repo are required' });
+  }
+  
+  try {
+    console.log(`Parsing GitHub repository: ${owner}/${repo} (branch: ${branch})`);
+    
+    // Use simple GitHub API without authentication for public repos
+    const axios = require('axios');
+    
+    // Get repository tree to find Terraform files
+    const treeUrl = `https://api.github.com/repos/${owner}/${repo}/git/trees/${branch}?recursive=1`;
+    const treeResponse = await axios.get(treeUrl);
+    
+    // Find .tf files
+    const terraformFiles = treeResponse.data.tree
+      .filter(item => item.type === 'blob' && item.path.endsWith('.tf'))
+      .slice(0, 10); // Limit to first 10 files for demo
+    
+    if (terraformFiles.length === 0) {
+      return res.json({
+        resources: { resource: {} },
+        dependencies: [],
+        groups: {},
+        apps: [],
+        message: 'No Terraform files found in repository'
+      });
+    }
+    
+    console.log(`Found ${terraformFiles.length} Terraform files`);
+    
+    // Fetch and parse each Terraform file
+    const applications = [];
+    let allResources = { resource: {} };
+    let allDependencies = [];
+    let allGroups = {};
+    
+    for (const file of terraformFiles) {
+      try {
+        // Get file content
+        const fileUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${file.path}?ref=${branch}`;
+        const fileResponse = await axios.get(fileUrl);
+        const content = Buffer.from(fileResponse.data.content, 'base64').toString('utf8');
+        
+        // Create a simple app based on file path
+        const appName = file.path.replace(/\.tf$/, '').replace(/[^a-zA-Z0-9]/g, '-');
+        const appId = `github-${appName}`;
+        
+        // Parse Terraform content (basic parsing for demo)
+        const resources = parseBasicTerraform(content);
+        
+        if (Object.keys(resources.resource || {}).length > 0) {
+          const app = {
+            id: appId,
+            name: appName,
+            source: 'github',
+            repository: { owner, repo, branch, path: file.path },
+            resources
+          };
+          
+          applications.push(app);
+          
+          // Merge resources with app prefix
+          for (const [type, typeResources] of Object.entries(resources.resource || {})) {
+            if (!allResources.resource[type]) allResources.resource[type] = {};
+            for (const [name, config] of Object.entries(typeResources)) {
+              const prefixedName = `${appName}_${name}`;
+              allResources.resource[type][prefixedName] = config;
+              allGroups[`${type}.${prefixedName}`] = {
+                appId,
+                appName,
+                source: 'github',
+                repository: { owner, repo, branch, path: file.path }
+              };
+            }
+          }
+          
+          // Infer dependencies for this app
+          const appDeps = inferDependencies(resources);
+          appDeps.forEach(dep => {
+            allDependencies.push({
+              from: `${dep.from.split('.')[0]}.${appName}_${dep.from.split('.')[1]}`,
+              to: `${dep.to.split('.')[0]}.${appName}_${dep.to.split('.')[1]}`,
+              type: dep.type || 'reference'
+            });
+          });
+        }
+      } catch (fileError) {
+        console.warn(`Error parsing file ${file.path}:`, fileError.message);
+      }
+    }
+    
+    console.log(`Successfully parsed ${applications.length} applications from GitHub`);
+    
+    res.json({
+      resources: allResources,
+      dependencies: allDependencies,
+      groups: allGroups,
+      apps: applications,
+      dataSource: 'github',
+      repository: { owner, repo, branch },
+      terraformFiles: terraformFiles.map(f => f.path)
+    });
+    
+  } catch (error) {
+    console.error('Error parsing GitHub repository:', error);
+    res.status(500).json({ 
+      error: 'Failed to parse GitHub repository', 
+      details: error.message 
+    });
+  }
+});
+
+// Enhanced parse endpoint that supports both legacy and new database
 app.get('/api/parse', async (req, res) => {
-  const { useEnterprise = false, environment = 'prod' } = req.query;
+  const { useEnterprise = false, environment = 'prod', useDatabase = 'true' } = req.query;
+  
+  // Try to use new database first, fallback to legacy mode
+  if (useDatabase === 'true') {
+    console.log('Using new database for application data');
+    try {
+      // Check if database API is available
+      await dbClient.healthCheck();
+      
+      // Get applications from new database
+      const visualizationData = await dbClient.getApplicationsForVisualization();
+      
+      console.log('Debug: Apps from database:', visualizationData.apps?.length || 0);
+      console.log('Debug: Resource types:', Object.keys(visualizationData.resources?.resource || {}));
+      console.log('Debug: Total resources:', Object.values(visualizationData.resources?.resource || {}).reduce((total, typeResources) => total + Object.keys(typeResources).length, 0));
+      
+      // Add database source indicator
+      visualizationData.dataSource = 'mongodb';
+      visualizationData.timestamp = new Date().toISOString();
+      
+      return res.json(visualizationData);
+    } catch (error) {
+      console.warn('Database API unavailable, falling back to legacy mode:', error.message);
+      // Initialize legacy JSON database if not already done
+      if (!db) {
+        try {
+          const FileSync = require('lowdb/adapters/FileSync');
+          const dbPath = path.join(__dirname, 'db.json');
+          console.log('Initializing legacy JSON database fallback at:', dbPath);
+          const adapter = new FileSync(dbPath);
+          db = low(adapter);
+          db.defaults({ maps: [], users: [], repositories: [], apps: [], analyses: [] }).write();
+          authService = new AuthService(db);
+        } catch (e) {
+          console.error('Legacy database initialization failed:', e);
+        }
+      }
+      // Continue to legacy mode below
+    }
+  }
   
   // Legacy mode - demonstrate cross-application architecture
-  if (!useEnterprise) {
-    console.log('Legacy mode - demonstrating cross-application dependencies');
-    try {
-      // Load and parse the two example applications
-      const fs = require('fs');
-      const path = require('path');
-      
-      const insightEngineFile = path.join(__dirname, 'data', 'example-ai-platform.tf');
-      const engagementHubFile = path.join(__dirname, 'data', 'example-engagement-hub.tf');
-      
-      let allResources = { resource: {} };
-      let allDependencies = [];
-      let allGroups = {};
-      let applications = [];
+  console.log('Legacy mode - demonstrating cross-application dependencies');
+  try {
+    // Load and parse the two example applications
+    const fs = require('fs');
+    const path = require('path');
+    
+    const insightEngineFile = path.join(__dirname, 'data', 'example-ai-platform.tf');
+    const engagementHubFile = path.join(__dirname, 'data', 'example-engagement-hub.tf');
+    
+    let allResources = { resource: {} };
+    let allDependencies = [];
+    let allGroups = {};
+    let applications = [];
       
       // Check if the files exist and try to parse them
       if (fs.existsSync(insightEngineFile) && fs.existsSync(engagementHubFile)) {
@@ -505,29 +715,6 @@ app.get('/api/parse', async (req, res) => {
       console.error('Error in /api/parse:', err);
       res.status(500).json({ error: 'Failed to parse Terraform files', details: err.message });
     }
-  } else {
-    // Enterprise mode - analyze local repository structure for demo
-    try {
-      const enterpriseService = new EnterpriseRepositoryService();
-      const repoPath = path.join(__dirname, '..'); // Use current project as demo
-      
-      console.log(`Enterprise analysis mode - analyzing local repository at ${repoPath}`);
-      const analysis = await enterpriseService.analyzeLocalRepository(repoPath, environment);
-      
-      // Convert enterprise analysis to legacy format for compatibility
-      const legacyFormat = convertAnalysisToLegacyFormat(analysis);
-      
-      res.json({
-        ...legacyFormat,
-        isEnterprise: true,
-        analysis: analysis,
-        summary: enterpriseService.generateSummaryReport(analysis)
-      });
-    } catch (err) {
-      console.error('Error in enterprise analysis:', err);
-      res.status(500).json({ error: 'Enterprise analysis failed', details: err.message });
-    }
-  }
 });
 
 // Helper function to convert enterprise analysis to legacy format
@@ -574,6 +761,55 @@ function convertAnalysisToLegacyFormat(analysis) {
   }
 
   return { resources, dependencies, groups, apps };
+}
+
+// Basic Terraform parser for GitHub integration (simplified for demo)
+function parseBasicTerraform(content) {
+  const resources = { resource: {} };
+  
+  try {
+    // Simple regex-based parsing for basic Terraform resources
+    const resourcePattern = /resource\s+"([^"]+)"\s+"([^"]+)"\s*{([^}]*(?:{[^}]*}[^}]*)*)}/g;
+    let match;
+    
+    while ((match = resourcePattern.exec(content)) !== null) {
+      const [, resourceType, resourceName, resourceBody] = match;
+      
+      if (!resources.resource[resourceType]) {
+        resources.resource[resourceType] = {};
+      }
+      
+      // Parse basic attributes from resource body
+      const attributes = {};
+      
+      // Extract simple string attributes
+      const stringAttrs = resourceBody.match(/(\w+)\s*=\s*"([^"]*)"/g);
+      if (stringAttrs) {
+        stringAttrs.forEach(attr => {
+          const [, key, value] = attr.match(/(\w+)\s*=\s*"([^"]*)"/);
+          attributes[key] = value;
+        });
+      }
+      
+      // Extract references to other resources
+      const references = resourceBody.match(/(\w+)\s*=\s*([a-zA-Z_][a-zA-Z0-9_]*\.[a-zA-Z_][a-zA-Z0-9_]*(?:\.[a-zA-Z_][a-zA-Z0-9_]*)*)/g);
+      if (references) {
+        references.forEach(ref => {
+          const [, key, value] = ref.match(/(\w+)\s*=\s*([a-zA-Z_][a-zA-Z0-9_]*\.[a-zA-Z_][a-zA-Z0-9_]*(?:\.[a-zA-Z_][a-zA-Z0-9_]*)*)/);
+          attributes[key] = value;
+        });
+      }
+      
+      resources.resource[resourceType][resourceName] = attributes;
+    }
+    
+    console.log(`Parsed ${Object.keys(resources.resource).length} resource types from Terraform content`);
+    
+  } catch (error) {
+    console.warn('Error in basic Terraform parsing:', error);
+  }
+  
+  return resources;
 }
 
 // Helper functions for cross-application mock data
@@ -797,5 +1033,105 @@ function createSimpleMockData() {
   return { allResources, allDependencies, allGroups, applications };
 }
 
-const port = process.env.PORT || 4001;
-app.listen(port, () => console.log(`Backend running at http://localhost:${port}`));
+// =========================
+// TELEMETRY ENDPOINTS
+// =========================
+
+// Collect telemetry for a specific application
+app.post('/api/telemetry/collect/:applicationId', async (req, res) => {
+  try {
+    const { applicationId } = req.params;
+    const result = await telemetryService.collectTelemetryData(applicationId);
+    res.json(result);
+  } catch (error) {
+    console.error('Error collecting telemetry:', error);
+    res.status(500).json({ error: 'Failed to collect telemetry', details: error.message });
+  }
+});
+
+// Collect telemetry for all applications
+app.post('/api/telemetry/collect-all', async (req, res) => {
+  try {
+    const result = await telemetryService.collectAllApplicationTelemetry();
+    res.json(result);
+  } catch (error) {
+    console.error('Error collecting all telemetry:', error);
+    res.status(500).json({ error: 'Failed to collect telemetry for all applications', details: error.message });
+  }
+});
+
+// Get telemetry summary for an application
+app.get('/api/telemetry/summary/:applicationId', async (req, res) => {
+  try {
+    const { applicationId } = req.params;
+    const { timeRange = '1h' } = req.query;
+    const result = await telemetryService.getTelemetrySummary(applicationId, timeRange);
+    res.json(result);
+  } catch (error) {
+    console.error('Error getting telemetry summary:', error);
+    res.status(500).json({ error: 'Failed to get telemetry summary', details: error.message });
+  }
+});
+
+// Generate historical telemetry data for an application
+app.post('/api/telemetry/generate-historical/:applicationId', async (req, res) => {
+  try {
+    const { applicationId } = req.params;
+    const { daysBack = 7 } = req.body;
+    const result = await telemetryService.generateHistoricalData(applicationId, daysBack);
+    res.json(result);
+  } catch (error) {
+    console.error('Error generating historical data:', error);
+    res.status(500).json({ error: 'Failed to generate historical data', details: error.message });
+  }
+});
+
+// =========================
+// DATABASE MIGRATION ENDPOINT
+// =========================
+
+// Migrate existing JSON data to MongoDB
+app.post('/api/migrate-database', async (req, res) => {
+  try {
+    if (!db) {
+      return res.status(400).json({ error: 'No legacy database available to migrate' });
+    }
+
+    const legacyData = {
+      apps: db.get('apps').value() || [],
+      users: db.get('users').value() || [],
+      repositories: db.get('repositories').value() || [],
+      analyses: db.get('analyses').value() || []
+    };
+
+    const migrationResults = await dbClient.migrateFromJSON(legacyData);
+    
+    res.json({
+      success: true,
+      message: 'Database migration completed',
+      results: migrationResults,
+      migratedAt: new Date().toISOString()
+    });
+  } catch (error) {
+    console.error('Error migrating database:', error);
+    res.status(500).json({ error: 'Database migration failed', details: error.message });
+  }
+});
+
+const port = process.env.SERVER_PORT || process.env.PORT || 4000;
+app.listen(port, async () => {
+  console.log(`Backend running at http://localhost:${port}`);
+  console.log('📊 Telemetry collection available via manual endpoints');
+  
+  // Validate MongoDB connection at startup
+  await validateMongoDBConnection();
+  
+  // Disable automatic telemetry collection to prevent startup issues
+  // Can be re-enabled once JWT authentication is properly configured
+  if (false && process.env.NODE_ENV === 'development') {
+    console.log('🔄 Starting continuous telemetry collection for development...');
+    setTimeout(() => {
+      telemetryService.startContinuousCollection(2); // Every 2 minutes in dev
+    }, 10000); // Wait 10 seconds for services to be ready
+  }
+});

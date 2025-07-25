@@ -1,0 +1,42 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="igw-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9900;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E88800;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#igw-gradient)" stroke="#fff" stroke-width="2"/>
+  
+  <!-- Internet Gateway representation -->
+  <g fill="#fff" stroke="#fff" stroke-width="1.5">
+    <!-- Gateway device -->
+    <rect x="24" y="26" width="16" height="12" rx="2" fill="none" stroke="#fff" stroke-width="2"/>
+    
+    <!-- Internet cloud -->
+    <ellipse cx="32" cy="16" rx="12" ry="6" fill="none" stroke="#fff" stroke-width="2"/>
+    <text x="32" y="18" font-family="Arial, sans-serif" font-size="8" fill="#fff" text-anchor="middle">INTERNET</text>
+    
+    <!-- VPC connection -->
+    <rect x="26" y="46" width="12" height="6" rx="1" fill="#fff"/>
+    <text x="32" y="50" font-family="Arial, sans-serif" font-size="6" fill="#FF9900" text-anchor="middle">VPC</text>
+    
+    <!-- Connection lines -->
+    <line x1="32" y1="22" x2="32" y2="26" stroke="#fff" stroke-width="2"/>
+    <line x1="32" y1="38" x2="32" y2="46" stroke="#fff" stroke-width="2"/>
+    
+    <!-- Gateway ports -->
+    <rect x="26" y="30" width="2" height="4" fill="#fff"/>
+    <rect x="30" y="30" width="2" height="4" fill="#fff"/>
+    <rect x="34" y="30" width="2" height="4" fill="#fff"/>
+    <rect x="38" y="30" width="2" height="4" fill="#fff"/>
+    
+    <!-- Traffic flow arrows -->
+    <path d="M30 24 L32 22 L34 24" fill="none" stroke="#fff" stroke-width="1"/>
+    <path d="M30 40 L32 42 L34 40" fill="none" stroke="#fff" stroke-width="1"/>
+  </g>
+  
+  <!-- Service label -->
+  <text x="32" y="58" font-family="Arial, sans-serif" font-size="8" fill="#333" text-anchor="middle">Internet GW</text>
+</svg>

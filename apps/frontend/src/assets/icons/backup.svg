@@ -1,0 +1,37 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="backup-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9900;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E88800;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#backup-gradient)" stroke="#fff" stroke-width="2"/>
+  
+  <!-- AWS Backup representation -->
+  <g fill="#fff" stroke="#fff" stroke-width="1.5">
+    <!-- Backup vault -->
+    <rect x="18" y="20" width="28" height="20" rx="2" fill="none" stroke="#fff" stroke-width="2"/>
+    
+    <!-- Backup data -->
+    <rect x="22" y="24" width="20" height="3" rx="1" fill="#fff"/>
+    <rect x="22" y="29" width="20" height="3" rx="1" fill="#fff"/>
+    <rect x="22" y="34" width="20" height="3" rx="1" fill="#fff"/>
+    
+    <!-- Backup arrow -->
+    <path d="M32 12 L32 18 M30 16 L32 14 L34 16" fill="none" stroke="#fff" stroke-width="2"/>
+    
+    <!-- Shield protection -->
+    <path d="M28 44 L28 50 L32 52 L36 50 L36 44" fill="none" stroke="#fff" stroke-width="2"/>
+    <circle cx="32" cy="47" r="1.5" fill="#fff"/>
+    
+    <!-- Schedule indicators -->
+    <circle cx="24" cy="26" r="1" fill="#28a745"/>
+    <circle cx="24" cy="31" r="1" fill="#28a745"/>
+    <circle cx="24" cy="36" r="1" fill="#ffc107"/>
+  </g>
+  
+  <!-- Service label -->
+  <text x="32" y="58" font-family="Arial, sans-serif" font-size="8" fill="#333" text-anchor="middle">Backup</text>
+</svg>

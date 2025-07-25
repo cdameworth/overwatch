@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "nodemon --legacy-watch --ignore backend/db.json backend/server.js",
-    "client": "live-server frontend --port=3000 --open=./index.html",
+    "server": "nodemon --legacy-watch --ignore apps/backend/src/db.json apps/backend/src/server.js",
+    "client": "live-server apps/frontend/src --port=3000 --open=./index.html",
+    "db:migrate": "node tools/migration/migrations/migrate.js",
+    "db:seed": "node tools/migration/migrations/seed.js",
+    "db:api": "cd apps/database-api && npm install && npm start",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -32,7 +35,14 @@
     "passport-github2": "^0.1.12",
     "express-session": "^1.17.3",
     "jsonwebtoken": "^9.0.0",
-    "bcryptjs": "^2.4.3"
+    "bcryptjs": "^2.4.3",
+    "mongoose": "^7.5.0",
+    "axios": "^1.5.0",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^6.10.0",
+    "bcrypt": "^5.1.1",
+    "joi": "^17.9.2",
+    "compression": "^1.7.4"
   },
   "devDependencies": {
     "concurrently": "^7.6.0",
@@ -54,8 +64,9 @@
     "testEnvironment": "jsdom",
     "setupFilesAfterEnv": ["<rootDir>/tests/setup/jest.setup.js"],
     "collectCoverageFrom": [
-      "frontend/**/*.js",
-      "backend/**/*.js",
+      "apps/frontend/src/**/*.js",
+      "apps/backend/src/**/*.js",
+      "apps/database-api/src/**/*.js",
       "!**/node_modules/**",
       "!**/tests/**"
     ],

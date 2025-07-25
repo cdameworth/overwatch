@@ -1,0 +1,56 @@
+{
+  "connections": [
+    {
+      "id": "cdameworth-personal",
+      "name": "Personal Account (cdameworth)",
+      "type": "personal",
+      "owner": "cdameworth",
+      "accessToken": "env:GITHUB_ACCESS_TOKEN",
+      "description": "Personal GitHub account repositories",
+      "repositories": [
+        {
+          "name": "stock-analytics-engine",
+          "description": "Stock analytics infrastructure with ML pipeline",
+          "defaultBranch": "main",
+          "private": false
+        }
+      ]
+    },
+    {
+      "id": "terraform-examples",
+      "name": "Terraform Examples",
+      "type": "public",
+      "owner": "terraform-aws-modules",
+      "description": "Public Terraform module examples",
+      "repositories": [
+        {
+          "name": "terraform-aws-lambda",
+          "description": "AWS Lambda Terraform module",
+          "defaultBranch": "master",
+          "private": false
+        },
+        {
+          "name": "terraform-aws-vpc",
+          "description": "AWS VPC Terraform module",
+          "defaultBranch": "master",
+          "private": false
+        }
+      ]
+    },
+    {
+      "id": "hashicorp-examples",
+      "name": "HashiCorp Examples",
+      "type": "public",
+      "owner": "hashicorp",
+      "description": "Official HashiCorp examples",
+      "repositories": [
+        {
+          "name": "terraform-provider-aws",
+          "description": "Terraform AWS Provider examples",
+          "defaultBranch": "main",
+          "private": false
+        }
+      ]
+    }
+  ]
+}

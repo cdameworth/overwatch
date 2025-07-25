@@ -1,0 +1,41 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9900;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E88800;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#sg-gradient)" stroke="#fff" stroke-width="2"/>
+  
+  <!-- Security Group representation -->
+  <g fill="#fff" stroke="#fff" stroke-width="1.5">
+    <!-- Firewall shield -->
+    <path d="M32 12 L44 18 L44 36 Q44 42 32 48 Q20 42 20 36 L20 18 Z" fill="none" stroke="#fff" stroke-width="2"/>
+    
+    <!-- Security rules grid -->
+    <line x1="24" y1="22" x2="40" y2="22" stroke="#fff" stroke-width="1"/>
+    <line x1="24" y1="28" x2="40" y2="28" stroke="#fff" stroke-width="1"/>
+    <line x1="24" y1="34" x2="40" y2="34" stroke="#fff" stroke-width="1"/>
+    <line x1="24" y1="40" x2="40" y2="40" stroke="#fff" stroke-width="1"/>
+    
+    <line x1="28" y1="18" x2="28" y2="42" stroke="#fff" stroke-width="1"/>
+    <line x1="36" y1="18" x2="36" y2="42" stroke="#fff" stroke-width="1"/>
+    
+    <!-- Checkmarks for allowed rules -->
+    <path d="M26 20 L27 21 L30 18" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <path d="M26 26 L27 27 L30 24" fill="none" stroke="#fff" stroke-width="1.5"/>
+    
+    <!-- X marks for denied rules -->
+    <path d="M34 30 L38 34 M38 30 L34 34" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <path d="M34 36 L38 40 M38 36 L34 40" fill="none" stroke="#fff" stroke-width="1.5"/>
+    
+    <!-- Ports/protocols -->
+    <text x="32" y="26" font-family="Arial, sans-serif" font-size="4" fill="#fff" text-anchor="middle">80</text>
+    <text x="32" y="32" font-family="Arial, sans-serif" font-size="4" fill="#fff" text-anchor="middle">443</text>
+  </g>
+  
+  <!-- Service label -->
+  <text x="32" y="58" font-family="Arial, sans-serif" font-size="8" fill="#333" text-anchor="middle">Security Group</text>
+</svg>

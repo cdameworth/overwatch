@@ -1,0 +1,16 @@
+{
+  "name": "@aws-app-visualizer/frontend",
+  "version": "1.0.0",
+  "description": "Frontend application for AWS App Visualizer",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "live-server src --port=3000 --open=./index.html",
+    "dev": "live-server src --port=3000 --open=./index.html --watch",
+    "build": "echo 'Frontend build not yet implemented'",
+    "test": "echo 'Frontend tests not yet implemented'"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

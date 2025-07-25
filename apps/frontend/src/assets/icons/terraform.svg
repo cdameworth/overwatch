@@ -1,0 +1,31 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="terraform-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#623CE4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5C4FE1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#terraform-gradient)" stroke="#fff" stroke-width="2"/>
+  
+  <!-- Terraform logo representation -->
+  <g fill="#fff" stroke="none">
+    <!-- Terraform T logo -->
+    <path d="M24 16 L24 48 L28 48 L28 20 L40 20 L40 16 Z"/>
+    <path d="M44 20 L44 44 L40 48 L40 24 Z"/>
+    
+    <!-- Resource blocks -->
+    <rect x="16" y="24" width="6" height="6" rx="1" fill="#fff" opacity="0.8"/>
+    <rect x="16" y="32" width="6" height="6" rx="1" fill="#fff" opacity="0.8"/>
+    <rect x="16" y="40" width="6" height="6" rx="1" fill="#fff" opacity="0.8"/>
+    
+    <!-- Connection lines -->
+    <line x1="22" y1="27" x2="24" y2="27" stroke="#fff" stroke-width="1" opacity="0.6"/>
+    <line x1="22" y1="35" x2="24" y2="35" stroke="#fff" stroke-width="1" opacity="0.6"/>
+    <line x1="22" y1="43" x2="24" y2="43" stroke="#fff" stroke-width="1" opacity="0.6"/>
+  </g>
+  
+  <!-- Service label -->
+  <text x="32" y="58" font-family="Arial, sans-serif" font-size="8" fill="#333" text-anchor="middle">Terraform</text>
+</svg>
